@@ -34,7 +34,7 @@
 
 .content{
   max-width: 600px;
-  margin: 40px auto;
+  margin:20px auto;
   padding: 20px;
 }
 
@@ -52,4 +52,26 @@
   font-size: 20px;
   color: #f1356d;
   margin-bottom: 8px;
+}
+
+#author-select-div{
+  display: flex;
+  margin: 0 0 20px 0;
+  align-items: center;
+  justify-content: center;
+  color: #333;
+}
+
+#author-select-label{
+  color: #f1356d;
+  margin-right: 20px;
+  font-weight: 700;
+}
+
+#author-select{
+  font-weight: 700;
+}
+
+.author-select-option{
+  font-weight: 500;
 }
