@@ -6,10 +6,10 @@
 }
 
 .navbar{
-  padding: 20px;
+  padding: 20px 40px 20px 40px;
   display: flex;
   align-items: center;
-  max-width: 600px;
+  max-width: 1600px;
   margin: 0 auto;
   border-bottom: 1px solid #f2f2f2;
 }
@@ -33,7 +33,7 @@
 }
 
 .content{
-  max-width: 600px;
+  max-width: 1600px;
   margin:20px auto;
   padding: 20px;
 }
@@ -54,7 +54,7 @@
   margin-bottom: 8px;
 }
 
-#author-select-div{
+#blog-modifiers{
   display: flex;
   margin: 0 0 20px 0;
   align-items: center;

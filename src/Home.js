@@ -18,9 +18,15 @@ const Home = () => {
         setSelectedAuthor(event.target.value);
     }
 
+    const handleDelete = (id) => {
+        const newBlogs = blogs.filter(blog => blog.id !== id);
+        setBlogs(newBlogs)
+        console.log("delted blog" + id)
+    }
+
     return (
         <div className="home">
-            <div id = "author-select-div"> 
+            <div id = "blog-modifiers"> 
                 <label htmlFor="author-select" id="author-select-label">Choose an author:</label>
                 <select name="author" id="author-select" value={selectedAuthor} onChange={handleAuthorChange}>    
                 <option className= "author-select-option" value="">All Authors</option>
@@ -32,7 +38,7 @@ const Home = () => {
                         ))
                     }
                 </select></div>
-            <BlogList blogs={selectedAuthor ? blogs.filter((blog) => blog.author === selectedAuthor) : blogs}  title={selectedAuthor ? `${selectedAuthor}'s Blogs!` : "All Blogs"}/>
+            <BlogList blogs={selectedAuthor ? blogs.filter((blog) => blog.author === selectedAuthor) : blogs}  title={selectedAuthor ? `${selectedAuthor}'s Blogs!` : "All Blogs"} handleDelete={handleDelete}/>
         </div>
      );
 }
