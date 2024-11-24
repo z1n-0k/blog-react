@@ -17,6 +17,18 @@
             "body" : "lorem ipsum ...",
             "author" : "Luigi",
             "id" : 2
+        },
+        {
+            "title" : "My Princess!",
+            "body" : "lorem ipsum ...",
+            "author" : "Bowser",
+            "id" : 3
+        },
+        {
+            "title" : "Lost",
+            "body" : "lorem ipsum ...",
+            "author" : "Luigi",
+            "id" : 4
         }
     ]
 }

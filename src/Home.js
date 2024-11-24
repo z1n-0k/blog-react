@@ -5,9 +5,9 @@ const Home = () => {
 
     const [blogs, setBlogs] = useState(null)
 
-    const authorArray = Array.from(
+    const authorArray = blogs ? Array.from(
         new Set(blogs.map((blog) => blog.author))
-      );
+    ) : [];
 
     const [selectedAuthor, setSelectedAuthor] = useState("");
     const handleAuthorChange = (event) => {
@@ -15,10 +15,11 @@ const Home = () => {
     }
 
     useEffect(() => {
-        fetch("some address").then(res => {
+        fetch("http://localhost:5000/blogs").then(res => {
             return res.json();
         }).then((data) => {
             setBlogs(data);
+
         })
     }, [])
 
