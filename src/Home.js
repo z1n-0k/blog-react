@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react'
 import BlogList from './BlogList';
+import SelectAuthorFilter from './SelectAuthorFilter';
 
 const Home = () => {
 
@@ -25,18 +26,7 @@ const Home = () => {
 
     return (
         <div className="home">
-            <div id = "blog-modifiers"> 
-                <label htmlFor="author-select" id="author-select-label">Choose an author:</label>
-                <select name="author" id="author-select" value={selectedAuthor} onChange={handleAuthorChange}>    
-                <option className= "author-select-option" value="">All Authors</option>
-                    {
-                        authorArray.map((author,index) => (
-                            <option  className= "author-select-option" key={index} value={author}>
-                                {author}
-                            </option>
-                        ))
-                    }
-                </select></div>
+            {authorArray && <SelectAuthorFilter authorArray = {authorArray} selectedAuthor = {selectedAuthor} handleAuthorChange = {handleAuthorChange}/>}
             {blogs && <BlogList blogs={selectedAuthor ? blogs.filter((blog) => blog.author === selectedAuthor) : blogs}  title={selectedAuthor ? `${selectedAuthor}'s Blogs!` : "All Blogs"}/>}
         </div>
      );
