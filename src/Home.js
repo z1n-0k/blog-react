@@ -1,42 +1,20 @@
 import { useState, useEffect } from 'react';
 import BlogList from './BlogList';
 import SelectAuthorFilter from './SelectAuthorFilter';
+import useFetch from './useFetch';
 
 const Home = () => {
-    const [blogs, setBlogs] = useState(null);
-    const [selectedAuthor, setSelectedAuthor] = useState("");
-    const [isPending, setIsPending] = useState(true);
-    const [error, setError] = useState(null);
     const blogsLocation = "http://localhost:5000/blogs"
-
-    const handleAuthorChange = (event) => {
-        setSelectedAuthor(event.target.value);
-    };
-
+    const {data: blogs, isPending, error} = useFetch(blogsLocation);
+    
+    const [selectedAuthor, setSelectedAuthor] = useState("");
     const authorArray = blogs
         ? Array.from(new Set(blogs.map((blog) => blog.author)))
         : [];
 
-    useEffect(() => {
-        fetch(blogsLocation)
-            .then((res) => {
-                if(!res.ok){
-                    throw Error("Couldnt Fetch data from: " + blogsLocation)
-                }
-                return res.json();
-            })
-            .then((data) =>{ 
-                setBlogs(data);
-                setIsPending(false);
-                setError(null)
-            })
-            .catch((error) => {
-                setError(error.message);
-                setIsPending(false);
-            });
-    }, []);
-
-
+    const handleAuthorChange = (event) => {
+        setSelectedAuthor(event.target.value);
+    };
 
     return (
         <div className="home">
