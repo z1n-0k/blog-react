@@ -4,7 +4,7 @@ const Create = () => {
 
     const [title, setTitle] = useState('');
     const [body, setBody] = useState('');
-    const [author, setAuthor] = useState('Mario');
+    const [author, setAuthor] = useState('');
     const [isPending, setIsPending] = useState(false);
     const history = useNavigate();
 
@@ -49,15 +49,15 @@ const Create = () => {
                     }}
                 ></textarea>
                 <label>Blog Author:</label>
-                <select
+                <input 
+                    type="text" 
+                    required
                     value={author}
                     onChange={(e) => {
                         setAuthor(e.target.value)
                     }}
-                >
-                    <option value="Mario">Mario</option>
-                    <option value="Yoshi">Yoshi</option>
-                </select>
+                />
+                
                 {!isPending && <button>Add Blog</button>}
                 {isPending && <button disabled>Adding Blog...</button>}
             </form>

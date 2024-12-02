@@ -1,12 +1,6 @@
 {
   "blogs": [
     {
-      "id": "2",
-      "title": "My Second Blog",
-      "body": "lorem ipsum ...",
-      "author": "Mario"
-    },
-    {
       "id": "3",
       "title": "To Love",
       "body": "lorem ipsum ...",
@@ -43,10 +37,10 @@
       "author": "Mario"
     },
     {
-      "id": "7942",
-      "title": "Love",
-      "body": "lorem ipsum ...",
-      "author": "Mario"
+      "id": "c1d8",
+      "title": "World Championship",
+      "body": "lorem ipsum ....",
+      "author": "Hikaru Nakamura"
     }
   ]
 }
