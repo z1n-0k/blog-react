@@ -1,34 +1,38 @@
 {
     "blogs":[
         {
+            "id" : 1,
             "title" : "My First Blog",
             "body" : "lorem ipsum ...",
-            "author" : "Mario",
-            "id" : 0
+            "author" : "Mario"
+            
         },
         {
+            "id" : 2,
             "title" : "My Second Blog",
             "body" : "lorem ipsum ...",
-            "author" : "Mario",
-            "id" : 1
+            "author" : "Mario"
+            
         },
         {
+            "id" : 3,
             "title" : "To Love",
             "body" : "lorem ipsum ...",
-            "author" : "Luigi",
-            "id" : 2
+            "author" : "Luigi"
+            
         },
         {
+            "id" : 4,
             "title" : "My Princess!",
             "body" : "lorem ipsum ...",
-            "author" : "Bowser",
-            "id" : 3
+            "author" : "Bowser"
+            
         },
         {
+            "id" : 5,
             "title" : "Lost",
             "body" : "lorem ipsum ...",
-            "author" : "Luigi",
-            "id" : 4
+            "author" : "Luigi"
         }
     ]
 }
